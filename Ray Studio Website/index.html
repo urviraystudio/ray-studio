@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray Studio — Digital Design & Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="#top">RAY STUDIO </a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a href="#services">Services</a>
+      <a href="#pilot">Pilot</a>
+      <a href="#contact">Contact</a>
+
+</nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span>Independent digital design studio</span>
+      <span>Canberra, Australia</span>
+    </div>
+
+    <h1>Digital experiences,<br>thoughtfully simplified.</h1>
+
+    <div class="hero-bottom">
+      <p>UX/UI · Web Design · Digital Systems</p>
+      <a href="#studio" class="text-link">Explore studio ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="section work-section" id="work">
+  <div class="section-label">Work</div>
+  <div class="work-message">
+    <h2>Work in progress.</h2>
+  </div>
+</section>
+
+<section class="section" id="studio">
+  <div class="section-label">Studio</div>
+  <div class="two-column">
+    <div>
+      <h2>Clear thinking.<br>Useful design.</h2>
+    </div>
+    <div class="body-copy">
+      <p>Ray Studio is an independent digital design practice focused on making complex ideas, systems and digital experiences feel simple, clear and useful.</p>
+      <p>The studio works across UX/UI, websites, redesign concepts, interactive prototypes and digital systems.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-label">Services</div>
+  <div class="services">
+    <div class="service-row"><span></span><h3>Website Design</h3><p>Minimal, responsive websites designed around clarity, hierarchy and usability.</p></div>
+    <div class="service-row"><span></span><h3>Website Redesign</h3><p>Refreshing existing websites while preserving what already works.</p></div>
+    <div class="service-row"><span></span><h3>UX/UI Design</h3><p>Interfaces and user journeys that reduce friction and make digital products easier to use.</p></div>
+    <div class="service-row"><span></span><h3>Interactive Prototypes</h3><p>Clickable concepts for testing ideas, workflows and new digital experiences.</p></div>
+    <div class="service-row"><span></span><h3>Digital Systems</h3><p>Practical digital workflows and systems that improve how information and tasks move.</p></div>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+
+  <div class="section-label">Contact</div>
+  <div class="contact-grid">
+    <div> <h2> Have a project<br> in mind?</h2>
+
+    </div>
+
+    <div class="contact-content">
+
+      <p>
+
+        For website, UX/UI, redesign or digital system enquiries,
+
+        get in touch with Ray Studio.
+
+      </p>
+
+      <a class="email-link" href="mailto:urviray.studio@gmail.com">urviray.studio@gmail.com ↗</a> 
+
+      <button
+        class="contact-button"
+        id="open-contact-panel">
+        Start a project →
+      </button>
+    </div>
+  </div>
+</section>
+<!-- CANBERRA PILOT -->
+
+<section class="section pilot-section" id="pilot">
+
+  <div class="section-label">
+
+    Canberra Pilot
+
+  </div>
+  <div class="two-column">
+    <div>
+      <h2>
+        Currently accepting selected Canberra pilot projects.
+      </h2>
+    </div>
+    <div class="body-copy">
+
+      <p>Ray Studio is currently offering a limited number of complimentarydesign projects to Canberra businesses.</p>
+
+      <p>The goal is to work directly with local businesses, understand their real digital challenges and pain points, and develop practical design solutions that improve their online experience.</p>
+
+      <p>
+
+        There is no design fee for selected pilot projects. In return, we ask
+        for honest feedback and permission to document the process as a
+
+        Ray Studio case study.
+
+      </p>
+
+      <a class="text-link" href="#contact">
+        Apply for a free pilot →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>RAY STUDIO © 2026</div>
+    <div>Canberra, Australia</div>
+    <div>Designed & built by Urvi Ray</div>
+  </div>
+</footer>
+
+<div class="drawer-overlay" id="drawer-overlay"></div>
+
+<aside class="contact-drawer" id="contact-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <div>
+      <div class="drawer-label">Ray Studio</div>
+      <h2>Start a project</h2>
+    </div>
+    <button id="close-contact-panel" class="drawer-close">Close ×</button>
+  </div>
+
+  <form onsubmit="event.preventDefault(); alert('Prototype enquiry submitted.');">
+    <div class="field"><label for="contact-name">Name</label><input id="contact-name" type="text" required></div>
+    <div class="field"><label for="contact-email">Email</label><input id="contact-email" type="email" required></div>
+    <div class="field">
+      <label for="contact-project">What do you need help with?</label>
+      <select id="contact-project">
+        <option>Website Design</option>
+        <option>Website Redesign</option>
+        <option>UX/UI Design</option>
+        <option>Interactive Prototype</option>
+        <option>Digital Systems</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="field"><label for="contact-message">Tell me about the project</label><textarea id="contact-message" rows="6"></textarea></div>
+    <button class="submit-button" type="submit">Send enquiry →</button>
+  </form>
+</aside>
+
+<script>
+const openButton=document.getElementById("open-contact-panel");
+const closeButton=document.getElementById("close-contact-panel");
+const drawer=document.getElementById("contact-drawer");
+const overlay=document.getElementById("drawer-overlay");
+function openDrawer(){drawer.classList.add("open");overlay.classList.add("open");document.body.classList.add("drawer-open");}
+function closeDrawer(){drawer.classList.remove("open");overlay.classList.remove("open");document.body.classList.remove("drawer-open");}
+openButton.addEventListener("click",openDrawer);
+closeButton.addEventListener("click",closeDrawer);
+overlay.addEventListener("click",closeDrawer);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer();});
+</script>
+
+</body>
+</html>
