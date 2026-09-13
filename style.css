@@ -442,29 +442,15 @@ textarea{
   text-transform:uppercase;
 }
 
-/* =========================
-
-   RESPONSIVE DESIGN
-
-========================= */
-
-/* TABLET */
-
-@media (max-width: 1000px){
+@media(max-width:900px){
 
   .hero,
 
   .section{
 
-    padding-left:24px;
+    padding-left:22px;
 
-    padding-right:24px;
-
-  }
-
-  .hero h1{
-
-    font-size:clamp(56px,10vw,100px);
+    padding-right:22px;
 
   }
 
@@ -474,23 +460,27 @@ textarea{
 
     grid-template-columns:1fr;
 
-    gap:48px;
+    gap:52px;
 
   }
 
   .service-row{
 
-    grid-template-columns:40px 220px 1fr;
+    grid-template-columns:5px 230px 1fr;
 
-    gap:20px;
+    gap:8px;
 
   }
 
   .service-row p{
 
-    transform:none;
-
     justify-self:start;
+
+    width:100%;
+
+    max-width:100%;
+
+    transform:none;
 
   }
 
@@ -498,39 +488,41 @@ textarea{
 
     grid-template-columns:1fr 1fr;
 
-    gap:20px;
+    row-gap:16px;
 
   }
 
-  .footer-grid div{
+  .footer-grid div:nth-child(2),
 
-    text-align:left !important;
+  .footer-grid div:nth-child(3),
+
+  .footer-grid div:nth-child(4){
+
+    text-align:left;
 
   }
 
 }
 
-/* MOBILE */
-
-@media (max-width: 700px){
-
-  body{
-
-    font-size:13px;
-
-  }
+@media(max-width:700px){
 
   .nav{
 
-    height:64px;
+    padding:0 12px;
 
-    padding:0 16px;
+    height:auto;
+
+    min-height:64px;
+
+    gap:16px;
 
   }
 
   .brand{
 
-    font-size:14px;
+    flex-shrink:0;
+
+    font-size:13px;
 
   }
 
@@ -538,23 +530,25 @@ textarea{
 
     gap:12px;
 
+    flex-wrap:wrap;
+
+    justify-content:flex-end;
+
   }
 
   .nav-links a{
 
     font-size:8px;
 
-    letter-spacing:.08em;
-
   }
 
   .hero{
 
-    min-height:calc(100vh - 64px);
+    min-height:auto;
 
-    padding:40px 18px 28px;
+    padding-top:90px;
 
-    align-items:flex-end;
+    padding-bottom:28px;
 
   }
 
@@ -562,19 +556,23 @@ textarea{
 
     flex-direction:column;
 
-    gap:5px;
-
-    padding-bottom:16px;
+    gap:6px;
 
   }
 
   .hero h1{
 
-    margin:28px 0 52px;
+    margin-top:28px;
 
-    font-size:clamp(48px,15vw,72px);
+    margin-bottom:64px;
 
-    line-height:.92;
+    font-size:clamp(48px,14vw,70px);
+
+    line-height:.9;
+
+    overflow-wrap:normal;
+
+    word-break:normal;
 
   }
 
@@ -584,31 +582,31 @@ textarea{
 
     align-items:flex-start;
 
-    gap:18px;
-
   }
 
   .section{
 
-    padding:70px 18px;
+    padding-top:74px;
+
+    padding-bottom:74px;
 
   }
 
   .section-label{
 
-    margin-bottom:46px;
+    margin-bottom:54px;
+
+  }
+
+  .work-section{
+
+    min-height:400px;
 
   }
 
   .work-message{
 
-    min-height:180px;
-
-  }
-
-  .work-message h2{
-
-    font-size:clamp(42px,13vw,64px);
+    min-height:220px;
 
   }
 
@@ -618,7 +616,7 @@ textarea{
 
     grid-template-columns:1fr;
 
-    gap:36px;
+    gap:42px;
 
   }
 
@@ -626,7 +624,13 @@ textarea{
 
   .contact-grid h2{
 
-    font-size:clamp(42px,12vw,64px);
+    max-width:100%;
+
+  }
+
+  .body-copy{
+
+    max-width:100%;
 
   }
 
@@ -636,7 +640,7 @@ textarea{
 
     font-size:16px;
 
-    line-height:1.6;
+    line-height:1.65;
 
   }
 
@@ -644,47 +648,41 @@ textarea{
 
     grid-template-columns:1fr;
 
-    gap:10px;
+    gap:8px;
 
-    padding:20px 0;
+    padding:18px 0;
 
   }
 
   .service-row span{
 
-    display:none;
+    display:block;
 
   }
 
   .service-row h3{
 
+    white-space:normal;
+
     font-size:24px;
 
-    white-space:normal;
+    line-height:1.15;
 
   }
 
-.service-row p{
+  .service-row p{
 
-  max-width:580px;
+    grid-column:auto;
 
-  color:#4e4944;
+    max-width:100%;
 
-  line-height:1.65;
+    width:100%;
 
-  width:100%;
+    transform:none;
 
-  justify-self:start;
+    justify-self:start;
 
-  transform:none;
-
-}
-
-  .email-link{
-
-    font-size:16px;
-
-    word-break:break-word;
+    line-height:1.55;
 
   }
 
@@ -692,13 +690,17 @@ textarea{
 
     grid-template-columns:1fr;
 
-    gap:10px;
+    gap:8px;
 
   }
 
-  .footer-grid div{
+  .footer-grid div:nth-child(2),
 
-    text-align:left !important;
+  .footer-grid div:nth-child(3),
+
+  .footer-grid div:nth-child(4){
+
+    text-align:left;
 
   }
 
@@ -706,33 +708,45 @@ textarea{
 
     width:100%;
 
-    padding:0 18px 40px;
+    padding:0 22px 50px;
+
+  }
+
+  .drawer-header h2{
+
+    font-size:30px;
 
   }
 
 }
 
-/* VERY SMALL PHONES */
+@media(max-width:480px){
 
-@media (max-width: 480px){
+  .nav{
+
+    align-items:flex-start;
+
+    padding-top:18px;
+
+    padding-bottom:18px;
+
+  }
 
   .nav-links{
 
-    gap:8px;
+    max-width:230px;
+
+    gap:10px 12px;
 
   }
 
   .nav-links a{
 
-    font-size:7px;
+    font-size:8px;
 
   }
 
-  .hero h1{
-
-    font-size:44px;
-
-  }
+  .hero,
 
   .section{
 
@@ -742,11 +756,73 @@ textarea{
 
   }
 
+  .hero{
+
+    padding-top:76px;
+
+  }
+
+  .hero h1{
+
+    font-size:clamp(44px,15vw,62px);
+
+    margin-bottom:52px;
+
+  }
+
+  .section{
+
+    padding-top:64px;
+
+    padding-bottom:64px;
+
+  }
+
+  .section-label{
+
+    margin-bottom:46px;
+
+  }
+
+  .work-message h2{
+
+    font-size:clamp(46px,13vw,70px);
+
+  }
+
   .two-column h2,
 
   .contact-grid h2{
 
-    font-size:40px;
+    font-size:clamp(44px,13vw,66px);
+
+  }
+
+  .service-row h3{
+
+    font-size:22px;
+
+  }
+
+  .contact-content{
+
+    max-width:100%;
+
+  }
+
+  .email-link{
+
+    max-width:100%;
+
+    overflow-wrap:anywhere;
+
+  }
+
+  footer{
+
+    padding-left:16px;
+
+    padding-right:16px;
 
   }
 
