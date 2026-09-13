@@ -442,99 +442,312 @@ textarea{
   text-transform:uppercase;
 }
 
-@media(max-width:900px){
+/* =========================
+
+   RESPONSIVE DESIGN
+
+========================= */
+
+/* TABLET */
+
+@media (max-width: 1000px){
+
   .hero,
+
   .section{
-    padding-left:22px;
-    padding-right:22px;
-  }
 
-  .two-column,
-  .contact-grid{
-    grid-template-columns:1fr;
-    gap:52px;
-  }
+    padding-left:24px;
 
-  .service-row{
-    grid-template-columns:50px 1fr;
-  }
+    padding-right:24px;
 
-  .service-row p{
-    grid-column:2;
-  }
-}
-
-@media(max-width:700px){
-  .nav{
-    padding:0 8px;
-  }
-
-  .nav-links{
-    gap:14px;
-  }
-
-  .nav-links a{
-    font-size:9px;
-  }
-
-  .hero{
-    min-height:720px;
-    padding-bottom:24px;
-  }
-
-  .hero-meta{
-    flex-direction:column;
-    gap:6px;
   }
 
   .hero h1{
-    margin-bottom:64px;
-    font-size:58px;
+
+    font-size:clamp(56px,10vw,100px);
+
   }
 
-  .hero-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+  .two-column,
 
-  .section{
-    padding-top:74px;
-    padding-bottom:74px;
-  }
+  .contact-grid{
 
-  .section-label{
-    margin-bottom:54px;
-  }
+    grid-template-columns:1fr;
 
-  .work-section{
-    min-height:400px;
-  }
+    gap:48px;
 
-  .work-message{
-    min-height:220px;
   }
 
   .service-row{
-    grid-template-columns:1fr;
-    gap:8px;
+
+    grid-template-columns:40px 220px 1fr;
+
+    gap:20px;
+
   }
 
   .service-row p{
-    grid-column:auto;
+
+    transform:none;
+
+    justify-self:start;
+
   }
 
   .footer-grid{
-    grid-template-columns:1fr;
-    gap:8px;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
   }
 
-  .footer-grid div:nth-child(2),
-  .footer-grid div:nth-child(3){
-    text-align:left;
+  .footer-grid div{
+
+    text-align:left !important;
+
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px){
+
+  body{
+
+    font-size:13px;
+
+  }
+
+  .nav{
+
+    height:64px;
+
+    padding:0 16px;
+
+  }
+
+  .brand{
+
+    font-size:14px;
+
+  }
+
+  .nav-links{
+
+    gap:12px;
+
+  }
+
+  .nav-links a{
+
+    font-size:8px;
+
+    letter-spacing:.08em;
+
+  }
+
+  .hero{
+
+    min-height:calc(100vh - 64px);
+
+    padding:40px 18px 28px;
+
+    align-items:flex-end;
+
+  }
+
+  .hero-meta{
+
+    flex-direction:column;
+
+    gap:5px;
+
+    padding-bottom:16px;
+
+  }
+
+  .hero h1{
+
+    margin:28px 0 52px;
+
+    font-size:clamp(48px,15vw,72px);
+
+    line-height:.92;
+
+  }
+
+  .hero-bottom{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+  }
+
+  .section{
+
+    padding:70px 18px;
+
+  }
+
+  .section-label{
+
+    margin-bottom:46px;
+
+  }
+
+  .work-message{
+
+    min-height:180px;
+
+  }
+
+  .work-message h2{
+
+    font-size:clamp(42px,13vw,64px);
+
+  }
+
+  .two-column,
+
+  .contact-grid{
+
+    grid-template-columns:1fr;
+
+    gap:36px;
+
+  }
+
+  .two-column h2,
+
+  .contact-grid h2{
+
+    font-size:clamp(42px,12vw,64px);
+
+  }
+
+  .body-copy p,
+
+  .contact-content p{
+
+    font-size:16px;
+
+    line-height:1.6;
+
+  }
+
+  .service-row{
+
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+    padding:20px 0;
+
+  }
+
+  .service-row span{
+
+    display:none;
+
+  }
+
+  .service-row h3{
+
+    font-size:24px;
+
+    white-space:normal;
+
+  }
+
+.service-row p{
+
+  max-width:580px;
+
+  color:#4e4944;
+
+  line-height:1.65;
+
+  width:100%;
+
+  justify-self:start;
+
+  transform:none;
+
+}
+
+  .email-link{
+
+    font-size:16px;
+
+    word-break:break-word;
+
+  }
+
+  .footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+  }
+
+  .footer-grid div{
+
+    text-align:left !important;
+
   }
 
   .contact-drawer{
+
     width:100%;
-    padding:0 22px 50px;
+
+    padding:0 18px 40px;
+
   }
+
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 480px){
+
+  .nav-links{
+
+    gap:8px;
+
+  }
+
+  .nav-links a{
+
+    font-size:7px;
+
+  }
+
+  .hero h1{
+
+    font-size:44px;
+
+  }
+
+  .section{
+
+    padding-left:16px;
+
+    padding-right:16px;
+
+  }
+
+  .two-column h2,
+
+  .contact-grid h2{
+
+    font-size:40px;
+
+  }
+
 }
